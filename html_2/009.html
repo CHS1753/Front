@@ -1,0 +1,39 @@
+<!--
+ 좋아하는 아이돌의 사진을 출력하시오.
+ 사진을 클릭하면 나무위키의 그 아이돌 페이지로 이동하시오 
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <style>
+    /* 
+        h1, img 등을 선택자라고 한다.(CSS 작업할 요소를 선택)
+        CSS 속성을 이용해 값을 지정한다.(html 속성과 이름이 다르다.)
+    */
+        h1 {
+            font-size: 50pt;
+            color: deeppink;
+            text-decoration: underline;
+            }
+    
+        img {
+            width: 300px ;
+            border: 4px soild green;
+            }
+    </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>예제</title>
+
+</head>
+
+<body>
+    <h1> <b>aespa</b> 나무위키 사이트 들어가기 </h1>
+    <a href="https://namu.wiki/w/aespa"><img src="../images/aespa.jpg" width="350" alt="aespa 사진"></a>
+    <!-- alt 가 없으면 안되는 이유 -> 웹 접근성을 위해 필요 시각 장애인들은 alt를 읽어서 알기 때문 -->
+</body>
+
+
+</html>

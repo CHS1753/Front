@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+        /* 선택자 쓰는 이유 내가 작업하고 싶은 정확한 요소를 선택하기 위해 */
+        /* 전체 선택자 -> 범위가 좁을수록 우선순위가 높음*/ 
+        *   {
+             color: hotpink; 
+            }
+            /* tag 선택자 */
+        h1 
+            {
+                color: blue;
+            }
+            /* 그룹선택자 */
+        p,div 
+            {
+                text-decoration: line-through;
+            }
+            /* p 안에 있는 div */
+        p div 
+            {
+                font-size: 2em;
+            }
+            /* div 위에 있는 마크 */
+        div mark 
+            {
+                font-size: 2em;
+            }
+    </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>제목입니다.</h1>
+    <p>우리나라 좋은나라</p>
+    <div><mark>div</mark> 입니다.</div>
+</body>
+</html>
