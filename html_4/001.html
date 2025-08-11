@@ -1,0 +1,37 @@
+<!DOCTYPE html>   <!-- 웹브라우저 한테 말해줌 -->
+<html lang="ko">
+<head>
+    <style> 
+    /* descendent 하위 선택자, 자손 선택자 -> #page table */
+        #page table,#page td,#page th {border: 1px solid black; width: 200px; border-collapse: collapse;}
+        #page td {text-align: center;}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+</head>
+<body>
+    <div id ="page">
+        <table id = > <!-- tbody(td), thead(th), tfoot -->
+            <caption> 명단</caption>
+            <thead>
+                <tr>
+                    <th>이름</th>
+                    <th>나이</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>크리스</td>
+                    <td>35세</td>
+                </tr>
+            <tr>
+                <td>사라</td>
+                <td>25세</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

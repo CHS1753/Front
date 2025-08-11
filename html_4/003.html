@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <style>
+        #sample table, #sample th, #sample td {border: 1px solid black; width: 400px; border-collapse: collapse;}
+        #sample th {border: 1px solid black; width: 400px;border-collapse: collapse; background-color: lightgrey;}
+        .price {text-align: center;}
+        /* #sample td {border: 1px solid black; width: 400px;border-collapse: collapse;} */
+        /* tfoot, td {border: 1px solid black; width: 400px;border-collapse: collapse;} */
+        /* 
+        태그 선택자 : 특정 요소 모두 선택 (우선순위 1)
+        class 선택자 : 여러개를 선택 얘는 특정 부분 (우선순위 10)
+        id 선택자: 요소에 이름을 부여해 그 요소만 선택, 한 선택자에 하나만 사용 가능 (id는 page에 한번 사용 가능) 얘는 영역 (우선순위 100)
+        */
+    </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="sample">
+    <table>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>상품명</th>
+                <th>수량</th>
+                <th>가격</th>
+            </tr>
+        </thead>
+    
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>콜라</td>
+                <td>1개</td>
+                <td class="price">1,500원</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>사이다</td>
+                <td>2개</td>
+                <td rowspan="2" class="price">1,000원</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>탄산수</td>
+                <td>3개</td>
+                <!-- <td></td> -->
+            </tr>
+        </tbody>
+    
+        <tfoot>
+            <tr>
+                <td>총 금액</td>
+                <td colspan="3" class="price"> 6,500원 </td>
+                <!-- <td></td>
+                <td></td> -->
+            </tr>
+        </tfoot>
+    </table>
+    </div>
+</body>
+
+</html>

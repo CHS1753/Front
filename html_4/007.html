@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline-Block</title>
+    <style>
+        /* layout */
+        #menu li {
+            width: 100px;
+            display: inline-block;
+            border: 5px solid dodgerblue;
+            text-align: center;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 20px;
+            /* 수직 가운데 정렬 -> flex
+                글자가 한줄이면 줄간격과 높이를 같이 한다.
+            */
+
+        }
+        #menu ul {
+            padding: 0;
+        }
+        #menu ul li:hover {
+            background-color: blue;
+            border: 5px solid dodgerblue;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            
+        }
+    </style>
+</head>
+<body>
+<div id="menu">
+    <ul>
+        <li>짜장면</li>
+        <li>짬뽕</li>
+        <li>볶음밥</li>
+        <li>중화비빔밥</li>
+    </ul>
+</div>
+</body>
+</html>

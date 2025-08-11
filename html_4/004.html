@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <style>
+        table, td, th {border: 1px solid black; width: 800px; border-collapse: collapse; text-align: center;}
+        .Department {background-color: rgb(255, 233, 108); text-align: center;}
+        .Person {background-color: lightskyblue; text-align: center;}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">Person</th>
+                <!-- <th></th> -->
+                <th colspan="2">Department</th>
+                <!-- <th></th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Person">Name</td>
+                <td class="Person" rowspan="4">photo</td>
+                <td class="Department">Name</td>
+                <td class="Department" rowspan="2">image</td>
+            </tr>
+            <tr>
+                <td class="Person">Surname</td>
+                <!-- <td></td> -->
+                <td class="Department">Structure</td>
+                <!-- <td></td> -->
+            </tr>
+            <tr>
+                <td class="Person">State</td>
+                <!-- <td></td> -->
+                <td class="Department">Floor</td>
+                <td class="Department" rowspan="2">QR code</td>
+            </tr>
+            <tr>
+                <td class="Person">City</td>
+                <!-- <td></td> -->
+                <td class="Department">Room</td>
+                <!-- <td></td> -->
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">E-mail</td>
+                <!-- <td></td> -->
+                <td colspan="2"> Tel.number</td>
+                <!-- <td></td> -->
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
