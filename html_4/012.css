@@ -1,0 +1,40 @@
+        * {
+            padding: 0;
+            margin: 0;
+            /* 우선순위 0 낮음 reset하려고 사용
+             css reset 외부 css에서 꺼내오기*/
+        }
+        #actor ul a li {
+            color: black;
+            text-decoration: none;
+        }
+            
+        #actor ul li {
+            /* border-radius: 10px; */
+            text-align: center;
+            display: inline-block;
+            width: 300px;
+            height: 30px;
+            border: 1px solid rgb(247, 148, 68);
+            height: 35px;
+            line-height: 35px;
+        } /* hover는 가상 클래스 10의  */
+
+        #actor li:hover{
+            /* border-radius: 10px; */
+            border: 1px solid rgb(247, 148, 68);
+            background-color: coral;
+            font-weight: bold;
+            cursor: pointer;
+            color: white;
+            height: 35px;
+            line-height: 35px;
+        }
+
+        #actor ul {
+            /* margin: 0 300px; */
+            background-color: rgb(247, 148, 68);
+        }
+            
+            
+            

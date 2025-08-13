@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요청</title>
+</head>
+<body>
+    <!-- form, ajax방식이 있다. 
+    from 방식은 URLincoded 형식으로 요청
+    ajax 방식은  
+    네트워크에서 주고받는 데어터의 형식은 문자열
+    정보를 문자열로 변경 필요
+    username-spring, password-1234 어떻게 보냄?
+    js는 {username:"spring", password:"1234"}
+        urlencoded형식 변경 -> ?username=spring&password=1234
+    encoding 데이터 형식을 변환 / decoding 변환한 데이터 형식을 다시 돌리기
+    enCOde/DECode -> CODEC
+    
+    method : 서버에 요청하는 방식 get/post
+        get -> urlencoded 서버에서 뭔가를 읽어낼 때 (여러번 실행해도 상관 없음) 서버가 바뀌지 않음
+            -> urlencoded된 요청 데이터가 주소 표시줄을 이용해 서버로 전송 -> 즐겨찾기 가능, 여러번 접근해도 상관 없음
+        post-> 서버에서 어떤 처리를 수행해서 서버가 변경 (여러번 실행하면 안됨 -> 만료된 페이지) 서버가 바뀐다.
+            -> urlencoded된 요청 데이터가 보이지 않는다. 
+    -->
+    <form method="get">
+        <input name="username"> <input name="password" type="password">
+        <button>보내기</button>
+    </form>
+    <form method="post">
+        <input name="username">
+        <input name="password" type="password">
+        <button>보내기</button>
+    </form>
+</body>
+</html>

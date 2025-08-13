@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="011.css" rel="stylesheet">
+    <style>
+        ul {background-color: green;}  /*internal css 내부 css*/
+        /* 
+        우선순위 인라인 > 내부 > 외부 
+        막판에 막판에 막판에 사용, 선택자가 없이 때려 박음
+        */
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <ul>
+        <li style="color: red">인라인 CSS</li>
+        <li>내부 CSS</li>
+        <li>외부 CSS</li>
+    </ul>
+</body>
+</html>
