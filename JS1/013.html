@@ -22,12 +22,14 @@
 
     const number = document.getElementById('val');
     const roading = document.getElementById('road');
-    roading.innerHTML = number.value
-    
+    roading.innerHTML = number.value;
+
       function up() {
-        let value =Number(roading.innerHTML);
+        let value =Number(number.value);
         value++;
+        number.value=value;
         roading.innerHTML = value;
+      
       }
   </script>
 </body>
