@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input value="10" id="nb1">
+  <input value="20" id="nb2">
+  <p id="ansure1"></p>
+  <p id="ansure2"></p>
+  <script>
+    const number1 = document.getElementById('nb1').value;
+    const number4 = document.getElementById('nb1').id;
+    const number2 = document.getElementById('nb2').value;
+    const number3 = number1*number2;
+    document.getElementById('ansure1').innerHTML = number3;
+    document.getElementById('ansure2').innerHTML = number1*number2;
+
+    console.log(number4)
+
+  </script>
+</body>
+</html>

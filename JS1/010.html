@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input id="Kor" value="" placeholder="국어 점수 입력">
+  <input id="Eng" value="" placeholder="영어 점수 입력">
+  <button onclick="result()">총점</button>
+  <button onclick="average()">평균</button>
+  <button onclick="together()">총합</button>
+  <p>총점 :<span id="sco"></span> </p>
+  <p>평균 :<span id="arg"></span> </p>
+  <script>
+    function result() {
+      const $Kor = Number(document.getElementById('Kor').value);
+      const $Eng = Number(document.getElementById('Eng').value);
+      const add = $Kor+$Eng;
+      document.getElementById('sco').innerHTML=add;
+    }
+    function average() {
+      const $Kor = Number(document.getElementById('Kor').value);
+      const $Eng = Number(document.getElementById('Eng').value);
+      const Aver = ($Kor+$Eng)/2;
+      document.getElementById('arg').innerHTML=Aver;
+    }
+    function together() {
+      const $Kor = Number(document.getElementById('Kor').value);
+      const $Eng = Number(document.getElementById('Eng').value);
+      const add = $Kor+$Eng;
+      const Aver = ($Kor+$Eng)/2
+      document.getElementById('sco').innerHTML=add;
+      document.getElementById('arg').innerHTML=Aver;
+    }
+  </script>
+
+
+</body>
+</html>

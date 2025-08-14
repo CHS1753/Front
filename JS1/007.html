@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <caption>원 면적 계산기</caption>
+  <input value="" id="radius">
+  <button onclick="calc()">보내기</button><br/>
+  <caption>결과 : </caption><span id="ansure"></span>
+  <script>
+    function calc() {
+      const riu = document.getElementById('radius');
+      const pie = 3.14 //고정된 값은 대문자로 고정 -> 약속
+      document.getElementById('ansure').innerHTML = pie*riu.value*riu.value;
+    }
+    console.log(3**3)
+  </script>
+</body>
+</html>

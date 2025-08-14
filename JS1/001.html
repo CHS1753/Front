@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SweetAlert2 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <!-- SweetAlert2 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- 위에거 다 사용 가능 -->
+ 
+      <title>Document</title>
+      
+      </head>
+<body>
+  <div></div>
+</body>
+  <script>
+    //이렇게 경고창을 띄우는건 자바스크립트가 아닌 웹브라우저가 띄움 하지만 각 브라우저마다 디자인이 달라짐 -> 디자인을 중요시 하는 곳(Ui/UX)에 치명적 -> 라이브러리를 가져오자
+    // alert("경고창")
+
+Swal.fire({
+  title: "Are you sure?",
+  text: "You won't be able to revert this!",
+  icon: "warning",
+  showCancelButton: true,
+  confirmButtonColor: "#3085d6",
+  cancelButtonColor: "#d33",
+  confirmButtonText: "Yes, delete it!"
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire({
+      title: "Deleted!",
+      text: "Your file has been deleted.",
+      icon: "success"
+    });
+  }
+});
+    // window.onload=function() {}
+  // 이 내용은 헤드에 실행하고자 할 때 사용, 웹페이지 로딩이 끝나고 실행될 때 보장된데
+  </script>
+
+
+    </html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="number" id="nb1" value="" placeholder="첫번째 숫자">
+  <input type="number" id="nb2" value="" placeholder="두번째 숫자">
+  <button onclick="cola()">더하기</button>
+
+  <p id="ansure"></p>
+  <script>
+    function cola() {
+      const num1 = document.getElementById('nb1').value;
+      const number1 = Number(num1);
+      const num2 = document.getElementById('nb2').value;
+      const number2 = Number(num2);
+      const number3 = number1+number2;
+      document.getElementById('ansure').innerHTML=number3;
+    }
+    // valueAsNumber로도 되는데 이건 보류
+  </script>
+</body>
+</html>

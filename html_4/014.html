@@ -20,8 +20,11 @@
     method : 서버에 요청하는 방식 get/post
         get -> urlencoded 서버에서 뭔가를 읽어낼 때 (여러번 실행해도 상관 없음) 서버가 바뀌지 않음
             -> urlencoded된 요청 데이터가 주소 표시줄을 이용해 서버로 전송 -> 즐겨찾기 가능, 여러번 접근해도 상관 없음
+            -> urlencoded된 요청 데이터가 주소 표시줄에 남는 것 -> querystring
+
+            
         post-> 서버에서 어떤 처리를 수행해서 서버가 변경 (여러번 실행하면 안됨 -> 만료된 페이지) 서버가 바뀐다.
-            -> urlencoded된 요청 데이터가 보이지 않는다. 
+            -> urlencoded된 요청 데이터가 보이지 않는다. 주소가 바뀌지 않는다.
     -->
     <form method="get">
         <input name="username"> <input name="password" type="password">

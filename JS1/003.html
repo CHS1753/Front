@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Objedt Model (DOM)</title>
+</head>
+<body>
+  <input value="10" id="ten">
+  <!-- 자바스크리트에서 쓸려면 id가 필요 -->
+   <script>
+    // html의 element는 Js는 객체
+    const element = document.getElementById('ten');
+    console.log(typeof element);
+    console.log(element.id);
+    console.log(element.value);
+    // element{ten,10}
+   </script>
+</body>
+</html>
