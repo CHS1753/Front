@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    let x = 10;
+    let y = 10;
+
+    for(let i=0; i<5; ++i ) {
+      console.log("fire");
+      console.log(x--,--y);
+      // 이 위치에서 x y 값은 같다.
+    };
+
+    let a =10;
+    let b =10;
+    const c = a++ + ++b;
+    console.log(c);
+    console.log(a);
+    console.log(b);
+  </script>
+
+</body>
+</html>

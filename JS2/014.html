@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="number" id="number1">
+  <input type="number" id="number2">
+  <button onclick="gong()">공배수 확인</button>
+  <hr>
+  <p id="result1"></p>
+  
+  <p id="result2"></p>
+  
+  <script>
+    function gong() {
+    const num1 = document.getElementById('number1').value
+    const num2 = document.getElementById('number2').value
+    const ansure1 = ((num1%5)==0 && (num1%7)==0) ? "공배수" : "공배수가 아님" 
+    const ansure2 = ((num2%5)==0 && (num2%7)==0) ? "공배수" : "공배수가 아님"
+    document.getElementById('result1').innerHTML = ansure1
+    document.getElementById('result2').innerHTML = ansure2
+      }
+  </script>
+
+</body>
+</html>

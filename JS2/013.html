@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panjung</title>
+</head>
+<body>
+  <input type="number" id="excel" placeholder="엑셀 점수">
+  <input type="number" id="access" placeholder="엑세스 점수">
+  <button onclick="pan()">판정</button>
+  <hr>
+  <p id="result"></p>
+  <script>
+    function pan() {
+      const excel$ = document.getElementById('excel').value;
+      const access$ = document.getElementById('access').value;
+      const result$ = (excel$>=70 && access$>=70) ? "합격" : "불합격";
+      document.getElementById('result').innerHTML = result$;
+    }
+
+  </script>
+
+</body>
+</html>

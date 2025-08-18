@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>경복궁 입장</title>
+</head>
+<body>
+  <h1>요금 계산기</h1>
+  <input type="text" id="nai" placeholder="나이 입력">
+  <button onclick="ticket()">확인</button>
+  <hr>
+  <p>당신은 <span id="result">000</span> 대상자 입니다.</p>
+
+  <script>
+    function ticket() {
+      const nai$ = document.getElementById('nai').value;
+      const pay = (nai$>=65 || 24>=nai$) ? "무료 입장" : "3000원 입장"
+      document.getElementById('result').innerHTML=pay;
+
+    }
+
+  </script>
+</body>
+</html>

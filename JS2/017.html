@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI 계산기 최신</title>
+</head>
+
+<body>
+  <h1>BMI 계산기</h1>
+  <input type="number" id="tall" placeholder="키를 입력하시오">
+  <input type="number" id="weight" placeholder="몸무게를 입력하시오">
+  <button onclick="BMI()">BMI 확인</button>
+  <hr>
+  <p id="result"></p>
+
+  <script>
+    function BMI() {
+    const tall$ = document.getElementById('tall').value;
+    const weight$ = document.getElementById('weight').value;
+    const bmi = weight$/((tall$/100)*(tall$/100));  //(tall$/100)**2도 가능
+    const ansure = (23>=bmi) ? "정상 체중" : "정상체중을 넘습니다.";
+    document.getElementById('result').innerHTML = ansure;
+    console.log(BMI)
+    }
+  </script>
+</body>
+</html>

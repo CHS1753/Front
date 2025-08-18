@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input id="a$">
+  <button onclick="nag()">누르기</button>
+  <!-- <input id="b$">
+  <button></button> -->
+  <p id="hd"></p>
+  <script>
+    const a = 443;
+    const b = 576;
+    const x = 100;
+
+    console.log(parseInt(a/x)*x);
+    console.log(parseInt(b/x)*x);
+    function nag() {
+    const num = document.getElementById('a$').value;
+    const y = parseInt(num/x)*x;
+    const ansuer = document.getElementById('hd').innerHTML = y;
+    }
+    </script>
+</body>
+</html>

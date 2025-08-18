@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1> Object -> 참조 타입 </h1>
+  <script>
+    const a = 10;
+    const b = 10;
+    const x = {value:10};
+    const y = {value:10};
+    const z = y;
+
+
+    console.log(a==b);
+    console.log(y==z);
+    console.log(x==y);
+    console.log(x.value==y.value);
+
+    // const i = 값을 바꿀 수 없음 undifine는 안됨, 정적 타입;
+    // let k = 값을 바꿀 수 있음 undifine -> 이게 값, 동적 타입;
+    const i = 10;
+    let k;
+    console.log(k);
+
+    const n = null;
+    console.log(n);
+    console.log(typeof n);
+    
+  </script>
+</body>
+</html>
