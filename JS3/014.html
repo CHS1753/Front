@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input id="nai" placeholder="나이 입력">
+  <button onclick="NAI()">확인</button>
+  <hr>
+  <span id="ansure"></span>
+
+  <script>
+    const name = "Pyruvate";
+    const $nai = document.getElementById('nai');
+    const $ansure = document.getElementById('ansure');
+   
+    function NAI() {
+      const age = +$nai.value;
+      if (age>=18) {$ansure.innerHTML = `${name}님은 ${age}세로 성인 입니다.`}
+      else {$ansure.innerHTML = `${name}님은 ${age}세로 미성년자 입니다.`} // 백틱으로 사용(ESC키 아래) 탬플릿 문자
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>성인 확인</title>
+</head>
+
+<body>
+  <input type="number" id="nai" placeholder="나이를 입력하시오">
+  <button onclick="Age()">확인</button>
+  <hr>
+  <p>당신은 <span id="result">000</span> 입니다.</p>
+
+  <script>
+    const ni = document.getElementById('nai');
+    const ansure = document.getElementById('result');
+
+    function Age() {
+      const ni$ = ni.value;
+      const age = (ni$>=18) ? "성인" : "미성년자";
+      ansure.innerHTML = age;
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>온도 변환</title>
+</head>
+<body>
+  <h1>온도 변환기</h1>
+  <input type="number" id="tem" placeholder="섭씨 입력">
+  <select onchange="CHG()" id="choice">
+    <option value="1">화씨로</option>
+    <option value="2">섭씨로</option>
+  </select>
+  <button onclick="CHG()">변경</button>
+  <hr>
+  <p>화씨 : <span id="ansure">000</span></p>
+  
+
+  <script>
+    const $tem = document.getElementById('tem');
+    const $ansure = document.getElementById('ansure');
+    const $choice = document.getElementById('choice');
+
+    function CHG() {
+      const TEM = +$tem.value;
+      const  CHOICE = +$choice.value;
+      const chg = CHOICE===1? (TEM*9/5)+32 + "℉" : (TEM-32)*5/9 + "℃"
+      $ansure.innerHTML = chg;
+    }
+  </script>
+</body>
+</html>

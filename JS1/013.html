@@ -20,15 +20,15 @@
     // a=a+1;
     // console.log(a);
 
-    const number = document.getElementById('val');
-    const roading = document.getElementById('road');
-    roading.innerHTML = number.value;
+    const $number = document.getElementById('val');
+    const $roading = document.getElementById('road');
+  
 
       function up() {
-        let value =Number(number.value);
-        value++;
-        number.value=value;
-        roading.innerHTML = value;
+        let $value =Number($number.value);
+        ++$value;
+        $number.value=$value;
+        $roading.innerHTML = $value;
       
       }
   </script>

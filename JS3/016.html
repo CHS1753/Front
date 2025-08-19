@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <img src="https://www.w3schools.com/js/pic_bulboff.gif" id="light">  
+  <!-- <img src="https://www.w3schools.com/js/pic_bulbon.gif"> -->
+  <button onclick="toggle()" value="0" id="num">클릭</button>
+  
+  <script>
+    const $light = document.getElementById('light');
+    const $num = document.getElementById('num');
+    let turn = +$num.value
+
+    function  toggle() {
+      if(turn===0) {
+        $light.src="https://www.w3schools.com/js/pic_bulbon.gif";
+        ++turn;
+      }
+      else {
+        $light.src="https://www.w3schools.com/js/pic_bulboff.gif";
+        turn=0;
+        console.log(turn);
+      }
+    }
+  </script>
+</body>
+</html>

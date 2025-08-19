@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>전구 조작</title>
+</head>
+<body>
+  
+  <button onclick="on()" id="ON">Turn on</button>
+  <img id="light" >
+  <button onclick="off()" id="OFF">Turn off</button>
+  
+  <script>
+    const $light = document.getElementById('light');
+    const $on = document.getElementById('ON');
+    const $off = document.getElementById('OFF');
+    $light.src="https://www.w3schools.com/js/pic_bulboff.gif";
+    $off.style.visibility ="hidden";  
+    // $off.style.display ="none";  //요소가 사라짐
+    
+    function on() {
+      const on = $light.src="https://www.w3schools.com/js/pic_bulbon.gif";
+      // $on.style.display ="none";
+      // $off.style.display ="inline";
+      $on.style.visibility ="hidden"; 
+      $off.style.visibility ="visible"; 
+    }
+  
+
+
+    function off() {
+      const off = $light.src = "https://www.w3schools.com/js/pic_bulboff.gif"
+      // $on.style.display ="inline";
+      // $off.style.display ="none";
+      $off.style.visibility ="hidden";
+      $on.style.visibility ="visible";
+    }
+      
+  </script>
+</body>
+</html>

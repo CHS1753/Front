@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="val" placeholder="면적입력">
+
+  <select onchange="choice()" id="choi">
+    <option disabled selected>선택</option>
+    <option>평으로</option>
+    <option>제곱미터로</option>
+  </select>
+
+  <input type="text" id="result" disabled>
+
+  <script>
+    const $val = document.getElementById('val');
+    const $choi = document.getElementById('choi');
+    const $result = document.getElementById('result');
+
+    function choice() {
+      const CHOI = $choi.value;
+      const VAL = +$val.value;
+      console.log(CHOI, VAL)
+
+      if (CHOI==="평으로") { 
+        const pyung =VAL/3.3;
+        $result.value = pyung;
+      }
+      else {
+        const pyung =VAL*3.3;
+        $result.value = pyung
+      }
+    }
+  </script>
+</body>
+</html>

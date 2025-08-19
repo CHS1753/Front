@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="number" id="pay" placeholder="한달 급여">
+  <input type="number" id="month" placeholder="근무 개월">
+  <button onclick="Money()">수령액 확인</button>
+  <button onclick="Tex()">세금 확인</button>
+  
+  <hr>
+
+  <p>당신의 수령액은 <span id="result">000</span>원 입니다.</p>
+  <p>당신의 세금은 <span id="tex">000</span>원 입니다.</p>
+
+  <script>
+    const $pay = document.getElementById('pay');
+    const $month = document.getElementById('month');
+    const $result = document.getElementById('result');
+    const $tex = document.getElementById('tex');
+
+    function Money() {
+      const PAY = +$pay.value;
+      const MONTH = +$month.value;
+      const RESULT = PAY*MONTH;
+      $result.innerHTML = RESULT;
+    };
+
+    function Tex() {
+      const PAY = +$pay.value;
+      const MONTH = +$month.value;
+      const TEX = (PAY*MONTH)*0.033;
+      $tex.innerHTML = TEX;
+    };
+
+  </script>
+</body>
+</html>
