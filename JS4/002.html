@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ㅏㅐ">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .green {color: green;}
+    .red {color: red;}
+    #line {
+      width: 600px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="line">
+  <input id = "kor"  placeholder="국어 점수 입력">
+  <input id = "eng"  placeholder="영어 점수 입력">
+  <button onclick="check()" >확인</button>
+  <hr>
+  <div id="result"></div>
+  </div>
+  <!-- <script>
+    const $kor = document.getElementById('kor');
+    const $eng = document.getElementById('eng');
+    const $result = document.getElementById('result');
+
+    function check() {
+      const KOR = +$kor.value
+      const ENG = +$eng.value
+      if (KOR>=70 && ENG >=70) {
+        $result.innerHTML = `국어 점수 ${KOR}점, 영어 점수 ${ENG}점으로 <span class="green">합격</span>입니다.`
+      }
+      else {
+        $result.innerHTML = `국어 점수 ${KOR}점, 영어 점수 ${ENG}점으로 <span class="red">불합격</span>입니다. `
+      }
+    } -->
+
+  <!-- </script> -->
+  <script>
+    const $kor = document.getElementById('kor');
+    const $eng = document.getElementById('eng');
+    const $result = document.getElementById('result');
+
+    function check() {
+      const KOR = +$kor.value
+      const ENG = +$eng.value
+      let html
+      if (KOR>=70 && ENG>=70) {
+        html = `국어 점수 ${KOR}점, 영어 점수 ${ENG}점으로 <span class="green">합격</span>입니다.`
+      } else {
+        html = `국어 점수 ${KOR}점, 영어 점수 ${ENG}점으로 <span class="red">불합격</span>입니다. `
+      }
+      $result.innerHTML = html;
+    }
+  </script>
+</body>
+</html>

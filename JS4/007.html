@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const ar = [90,80,"60",75,85,55,95];
+    let add = +0;
+    let count = +0;
+    for (const $ar of ar) {
+      ++count;
+      add+=+$ar
+      // if () {
+      //   console.log("확인")
+      // } 
+    }
+    let avg = add/count;
+    console.log(`합계: ${add}`)
+    console.log(`갯수: ${count}`)
+    console.log(`평균: ${parseInt(avg)}`)
+  </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="number" id="NUM">
+  <button onclick="asd()">출력</button>
+  <hr>
+  <ul id="target">
+  </ul>
+  <script>
+    const ar = [];
+    const num = document.getElementById('NUM');
+    const $target = document.getElementById('target');
+    function asd() {
+      if (num.value==='') {
+        return;
+        alert("다시")
+      }
+      const $num = +num.value;
+      num.value = "";
+      num.focus();
+      ar.push($num);
+      console.log(ar)
+      console.log($num)
+      let html =``;
+      for (const $ar of ar) {
+        html+=`<li>${$ar}</li>`;
+      }
+      $target.innerHTML = html;
+    }
+  </script>
+</body>
+</html>

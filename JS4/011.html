@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input id="TODO" type="text">
+  <button onclick="add()">추가</button>
+  <hr>
+  <ul id="LIST">
+
+  </ul>
+  <script>
+    const ar = [];
+    const todo = document.getElementById('TODO');
+    const list = document.getElementById('LIST');
+    
+    function add() {
+      if (todo.value==='') {
+        return;
+      }
+      const $todo = todo.value;
+      todo.value="";
+      todo.focus();
+      ar.push($todo);
+      console.log(ar);
+      let html=``;
+      for (const $ar of ar) {
+        html += `<li> ${$ar} </li>`
+      }
+      list.innerHTML = html;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .red {color: red;}
+    .blue {color: blue;}
+    .green {color: green;}
+  </style>
+</head>
+<body>
+  
+  if ("금수저니?") {console.log("VVIP")}
+  else if ("은수저니?") {console.log("VIP") }
+  else {console.log("아니구나")}
+
+  <input id="score" placeholder="점수 입력">
+  <button onclick="check()">확인</button>
+  <hr>
+  <div id="ansure" disabled></div>
+
+  <script>
+
+    const jumsu = document.getElementById('score');
+    const $ansure = document.getElementById('ansure');
+
+    function check() {
+      const $jumsu = jumsu.value;
+      console.log($jumsu);
+      if ($jumsu>=90) {
+        $ansure.innerHTML = `<p class="blue">${$jumsu} 점으로 우수 입니다.</p>`
+      }
+      else if ($jumsu>=70) {
+        $ansure.innerHTML = `<p class="green">${$jumsu} 점으로 합격 입니다.</p>`
+      }
+      else {
+         $ansure.innerHTML = `<p class="red">${$jumsu} 점으로 불합격 입니다.</p>`
+      }
+    }
+  </script>
+  <!-- <script>
+
+    const jumsu = 90;
+    const $ansure = document.getElementById('ansure');
+    function check() {
+      console.log(jumsu);
+      if (jumsu>=90) {
+        var message = `<p class="blue">${jumsu} 점으로 우수 입니다.</p>`
+      }
+      else if (jumsu>=70) {
+        var message = `<p class="green">${jumsu} 점으로 합격 입니다.</p>`
+      }
+      else {
+        var message = `<p class="red">${jumsu} 점으로 불합격 입니다.</p>`
+      }
+      $ansure.innerHTML = message;
+    }
+  </script> -->
+
+</body>
+</html>
