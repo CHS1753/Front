@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <input id="idolname" placeholder="이름">
+    <select id="role">
+      <option disabled selected value="0">선택</option>
+      <option>리더</option>
+      <option>보컬</option>
+      <option>댄서</option>
+    </select>
+    <button onclick="check()">추가</button>
+    <button onclick="put()">올리기</button>
+    <hr>
+    <ul id="idol">
+
+    </ul>
+  </div>
+  <script>
+    const Idol = [];
+    const $idolname = document.getElementById('idolname');
+    const $role = document.getElementById('role');
+    const $idol = document.getElementById('idol');
+    
+    function check() {
+      const Idolname = $idolname.value;
+      const Role = $role.value;
+      Idol.push({Idolname, Role});
+      console.log(Idol);
+      $idolname.value="";
+      $idolname.focus();
+    }
+    function put() {
+      let idollist="";
+      for (const $Idol of Idol) {
+        idollist+=`<li> 이름: ${$Idol.Idolname}, 역할: ${$Idol.Role} <button onclick="del('${$Idol.Idolname}');">삭제</button></li>`;
+      }
+      $idol.innerHTML=idollist;
+      console.log(idollist,Idol)
+      
+    }
+      function del(Idolname) {
+        alert("dasdas")
+        for(let i=0;i<Idol.length;++i) {
+          if(Idol[i].Idolname===Idolname){
+            Idol.splice(i,1);
+            break;
+          }
+        put();
+        }
+      }
+       
+    
+  </script>
+</body>
+</html>

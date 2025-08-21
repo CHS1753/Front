@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM 작업</title>
+</head>
+<body>
+  <ul id="menu">
+
+  </ul>
+  <script>
+    const $menu = document.getElementById('menu');
+    const ar = ["간짜장", "토달볶", "중화 비빔밥"];
+    let food = ""
+    for (const $ar of ar) {
+      food+= `<li> ${$ar} </li>`
+    }
+    $menu.innerHTML= food;
+  </script>
+</body>
+</html>

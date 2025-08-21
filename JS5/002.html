@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>layout markup</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    #app {
+      width: 1000px;
+      margin: 0 auto;
+    }
+    header, nav, footer {
+      height: 50px;
+      line-height: 50px;
+      border: 1px solid deepskyblue;
+      text-align: center;
+    }
+    footer { background-color: brown;}
+    aside {
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      background-color: skyblue;
+      text-align: center;
+      float: left;
+  
+      
+    }
+    section {
+      width: 800px;
+      background-color: darkblue;
+      color: white;
+      text-align: center;
+      float: left;
+      min-height: 600px;
+    }
+    /* float된 자식은 부모의 높이를 계산할 때 적용 안됨 따라서 부모의 높이는 0이 되고 부모 뒤에 있는 요소들이 위로 치고 올라오는 상황 발생, float clear 방법 필요 => 7개 */
+    main {overflow: auto;}
+    /* 넘치는 것을 가리는 것 */
+  </style>
+</head>
+
+<body>
+  <!-- <div id="app">
+    <div id="header">사이트 로고</div>
+    <div id="nav"> 메인 메뉴</div>
+
+    <div id="main">
+      <div id="left">왼쪽</div>
+      <div id="section">본문</div>
+      <div id="right">오른쪽</div>
+    </div>
+    
+    <div id="footer">아랫쪽</div>
+  </div> -->
+
+  <div id="app">
+    <header>사이트 로고</header>
+    <nav> 메인 메뉴</nav>
+
+    <main>
+      <aside>왼쪽</aside>
+      <section>
+        <article>
+           내용
+        </article>
+      </section>
+      <aside>오른쪽</aside>
+    </main>
+    
+    <footer>아랫쪽</footer>
+  </div>
+</body>
+
+</html>

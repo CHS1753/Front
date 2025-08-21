@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>두번 째 if문</title>
+</head>
+<body>
+  <script>
+    const ar = ['이상','홍루','가치우'];
+// 위치(인덱스)를 이용한 접근
+    // for(const irum of ar) {}
+    // console.log(ar[0]);
+    // console.log(ar[1]);
+    // console.log(ar[2]);
+    let i =0;
+    
+    for(let i=0; i<ar.length; i++); {
+        console.log(ar[i]);
+      }
+    // for(let i=0; i<=2; ++i); {
+    //     console.log(ar[i]);
+    //   }
+      for (i=0; i<ar.length; i++) {
+        if(ar[i]==='이상') {
+          ar.splice(i,1);
+        }
+      }
+      console.log(ar)
+
+      // ar.splice(1,1);
+      // console.log(ar[0]);
+      // console.log(ar[1]);
+      // console.log(ar[2]);
+      </script>
+</body>
+</html>

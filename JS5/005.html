@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .yori {color: tomato;}
+    .siksa {color: blueviolet;}
+  </style>
+</head>
+<body>
+  <h1>메뉴판</h1>
+  <ul id="menus">
+  </ul>
+  <script>
+    const cpu = {name:'5700f', vender:'AMD', price:300000}
+    const menu = [{name:'간짜장', price:8000, category:'siksa'}, {name:'토달볶',price:15000, category:'yori'}, {name:'중화비빔밥',price:12000, category:'siksa'}]
+    const $menus = document.getElementById('menus');
+    let foods =""
+    for (const MENU of menu) {
+      // foods+=`<li>${MENU.name}: ${MENU.price}원</li>`
+      // console.log(foods)
+      if (MENU.category==='siksa') {
+        foods+=`<li class='siksa'>${MENU.name}: ${MENU.price}원</li>`}
+       else {foods+=`<li class='yori'>${MENU.name}: ${MENU.price}원</li>`}
+    }
+    $menus.innerHTML=foods;
+  </script>
+</body>
+</html>

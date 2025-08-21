@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .mainbocer {color: deeppink;}
+    .maindancer {color: brown;}
+    .dancer {color: chocolate;}
+    .ledder {color: rgba(201, 182, 17, 0.979);}
+    .center {color: green;}
+  </style>
+</head>
+<body>
+  <ul id="idol"></ul>
+  <script>
+    const ITZY = [{name:'예지',age:25,birthday:'05/26',category:'ledder'}, {name:'류진',age:24,birthday:'04/17',category:'center'}, {name:'리아',age:25,birthday:'07/21',category:'mainbocer'},
+                  {name:'채령',age:24,birthday:'06/05',category:'maindancer'}, {name:'유나',age:21,birthday:'12/09', category:'dancer'}]
+    const $idol = document.getElementById('idol');
+    let itzy = "";
+    for (const $ITZY of ITZY) {
+      if ($ITZY.category==='ledder') {
+        itzy+=`<li class='ledder'> 이름: ${$ITZY.name} 나이: ${$ITZY.age} 생일: ${$ITZY.birthday}`
+      } else if ($ITZY.category==='mainbocer'){ 
+        itzy+=`<li class='mainbocer'> 이름: ${$ITZY.name} 나이: ${$ITZY.age} 생일: ${$ITZY.birthday}`
+      } else if ($ITZY.category==='maindancer'){
+        itzy+=`<li class='maindancer'> 이름: ${$ITZY.name} 나이: ${$ITZY.age} 생일: ${$ITZY.birthday}`
+      } else if ($ITZY.category==='dancer'){
+        itzy+=`<li class='dancer'> 이름: ${$ITZY.name} 나이: ${$ITZY.age} 생일: ${$ITZY.birthday}`
+      } else {
+        itzy+=`<li class='center'> 이름: ${$ITZY.name} 나이: ${$ITZY.age} 생일: ${$ITZY.birthday}`
+      }
+    }
+    $idol.innerHTML=itzy;
+  </script>
+</body>
+</html>
