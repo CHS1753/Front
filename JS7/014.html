@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ <input type="text" id="menu">
+ <button onclick="addMenu()">추가</button>
+ <hr>
+ <ul id="menus"></ul>
+ <script>
+  const Menus = [{mno:1, name:'김치찌개'}, {mno:2, name:'돈가스'}]
+  const $menus = document.getElementById('menus');
+  const $menu = document.getElementById('menu');
+  let mno =3;
+  function printMenus() {
+    let html = "";
+    for (const menus of Menus) {
+      html+=`<li>번호: ${menus.mno} 이름: ${menus.name} <button onclick="delMenu(${menus.mno})">삭제</button> </li>`
+      // break;
+    }
+    $menus.innerHTML=html;
+  }
+  printMenus();
+  function addMenu() { 
+    const name = $menu.value;
+    $menu.value = "";
+    $menu.focus();
+    const Menu = {mno:mno++, name:name};
+    Menus.push(Menu);
+    printMenus()
+
+  }
+  function delMenu(mno) { 
+    for (i=0; i<Menus.length; ++i) {
+      if (Menus[i].mno===mno) {
+        Menus.splice(i,1);
+        break;
+      }
+    }
+    printMenus();
+  }
+ </script> 
+</body>
+</html>

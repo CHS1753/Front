@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scope</title>
+</head>
+<body>
+  <script>
+    // 아래 a는 소속되어 있는 중괄호가 없음 -> 전역(global) -> 어떤 스코프만 사용 가능
+    const a =10;
+    // const a =20;
+
+    {
+      const a =30;
+      console.log(a);
+    }
+    console.log(a);
+  </script>
+</body>
+</html>

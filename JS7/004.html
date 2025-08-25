@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const ar = [
+      {name:'이정한',jumsu:92}, {name:'김은찬',jumsu:76}, {name:'채현석',jumsu:65}, {name:'전유리',jumsu:80}
+    ];
+    let sum = 0;
+    for (let i=0; i<ar.length; ++i) {
+      sum+=ar[i].jumsu;
+      console.log(sum)
+    }
+    const avg = sum/4;
+    console.log(avg);
+  </script>
+</body>
+</html>

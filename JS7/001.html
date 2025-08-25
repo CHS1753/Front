@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  if()
+  for()
+  break, continue
+  return
+  <script>
+    let sum = 0;
+    // 1+3+5+7+9+11
+    for(let i=1; i<=100; ++i) {
+      if(i%2==0) {
+        continue;
+      }
+      sum+=i;
+      if(i>10) {
+        break;
+      }
+    }
+    console.log(sum);
+  </script>
+</body>
+</html>

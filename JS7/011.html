@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM level 2</title>
+</head>
+<body>
+  <button id="hap">합계</button>
+  <script>
+    const ar = [75,80,85,69,51];
+    const $hap = document.getElementById('hap');
+    
+    function add(ar) {
+      let ADD = 0;
+      for (const $ar of ar) {
+        ADD+=$ar;
+      }
+      return ADD;
+      console.log(ADD);
+    }
+    const sum = add(ar);
+    
+    $hap.addEventListener("click",sum);
+  </script>
+</body>
+</html>

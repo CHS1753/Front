@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>unknow hamsu </title>
+</head>
+<body>
+  <button onclick="alert('안녕')" >안녕</button>
+  <button id="btn">안녕2</button>
+  <!-- 사용자의 행동 -> 이벤트 -->
+  <script>
+    //함수
+    //익명함수
+    //콜백함수 -> 개발자가 함수를 작성한 다음, 위탁해서 실행
+    //이벤트를 처리하는 함수 -> eventHandler
+    //이벤트를 처리하는 방식 - DOM level 0 이벤트 처리 -> onclick  DOM level 2 이벤트 처리 -> 아래 한거 
+    const h1 = function() {
+      alert('안녕하세요');
+    }
+
+    const $btn = document.getElementById('btn');
+    $btn.addEventListener("click", h1);
+  </script>
+</body>
+</html>

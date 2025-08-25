@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hanmsu </title>
+</head>
+<body>
+  <script>
+    function sum1(x,y) {
+      return x+y;
+    }
+    // JS의 변수는 함수를 담을 수 있고 이름없이 함수를 만들 수 있다. -> 익명함수
+    const sun2 = function (x,y) {
+      return x+y;
+    }
+    sun2(10,20);
+    console.log(sun2(10,20));
+
+
+    const hi = function () {
+      console.log("안녕하세요");
+    }
+    // setTimeout(기능, 일정시간) 함수는 가로 열고 닫으면 바로 실행 가로를 열고 닫으면 안됨
+    setTimeout(hi, 5000);
+
+    setTimeout (function() {
+      console.log("이게 되네;;")
+    },5000)
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    function hi() {
+      console.log("안녕하세요");
+    }
+
+    hi();
+    // hi1();
+
+    //파라미터 추가
+    function introduce() {
+      console.log(`안녕하세요 ${name} 입니다.`);
+    }
+
+    //호출
+    const name = ['홍길동', '전우치', '임꺽정']
+    for (const names of name) {
+      introduce(names);
+    }
+  </script>
+</body>
+</html>

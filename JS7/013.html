@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>todolist 내용 만들어보기</title>
+</head>
+<body>
+  <input type="text" id="title">
+  <button id="add" onclick="ADD()">추가</button>
+  <table>
+    <thead>
+      <tr>
+        <th>번호</th>
+        <th>내용</th>
+        <th>지우기</th>
+      </tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+  </table>
+  <script>
+    const $title = document.getElementById('title');
+    const $tbody = document.getElementById('tbody');
+    const $add = document.getElementById('add');
+    const todo = [];
+    num = +0;
+    function ADD() {
+      // ++num;
+      const title = $title.value;
+      todos = {num:++num, title:title, finish:false};
+      todo.push(todos);
+      console.log(todo);
+      $push();
+    }
+
+    function $push() {
+      let html = "";
+      for(i=0; i<todo.length; ++i) {
+        html += `<tr>
+          <td>${todo[i].num} 번</td>
+          <td>${todo[i].title}</td>
+          <td><button onclick="remove(${todo[i].num})">
+            삭제
+            </button></td>
+          </tr>`
+      }
+      $tbody.innerHTML = html;
+    }
+    
+    function remove(num) {
+      for(let i=0; i<todo.length; ++i) {
+
+        if(todo[i].num===num) {
+          todo.splice(i,1);
+        }
+        break;
+      }
+      $push();
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+      const ar = [
+      {name:'이정한',jumsu:92}, {name:'김은찬',jumsu:76}, {name:'채현석',jumsu:65}, {name:'전유리',jumsu:80}
+    ];
+    let sum = +0;
+    let name1 = +0;
+    const names = [];
+    for (let i = 0; i<ar.length; ++i) {
+      
+      if(ar[i].jumsu>=70) {
+        sum+=ar[i].jumsu;
+        console.log(ar[i].name);
+        ++name1;
+        names.push(ar[i].name)
+      } else {
+        continue;
+      }
+      const avg = parseInt(sum/name1);
+      // const avg2 = parseInt(sum/names.value);
+      console.log(name1,sum,avg,names);
+    }
+  </script>
+</body>
+</html>
